@@ -89,5 +89,17 @@ class DoubleLinkedList
             cout << "\nList is empty" << endl;
             return;
         }
+
+        cout << "\nEnter the roll number of the student whose record is to be deleted: ";
+        int rollNo;
+        cin >> rollNo;
+
+        Node *currrent = START;
+        
+        //Step 1: Traverse the list to find the node
+        while (currrent != NULL && currrent->noMhs != rollNo)
+            currrent = currrent->next;
+
+        if (currrent == NULL)
     }
 }
