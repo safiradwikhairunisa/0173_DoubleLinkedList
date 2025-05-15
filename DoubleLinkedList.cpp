@@ -123,6 +123,10 @@ class DoubleLinkedList
                 currrent->next->prev = currrent->prev;
         }
 
-        
+        //step 5: Delete the node
+        delete currrent;
+        cout << "Record with roll number " << rollNo << "delete" << endl;
     }
+
+    
 }
