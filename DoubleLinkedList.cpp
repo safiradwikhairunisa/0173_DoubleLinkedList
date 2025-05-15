@@ -78,7 +78,7 @@ class DoubleLinkedList
         //insert last node
         if (currrent->next != NULL)
             newNode->next->prev = newNode; //step 9c: current.next.prev = newNode
-
+        
         currrent->next = newNode; //step 9d: current.next = newNode
     }
 
@@ -113,5 +113,16 @@ class DoubleLinkedList
             if (START != NULL)
                 START->prev = NULL; //step 2b: START.prev = NULL
         }
+        else
+        {
+            //step 3: Link previous node to next of current
+            currrent->prev->next = currrent->next;
+
+            //step 4: If current is not the last node
+            if (currrent->next != NULL)
+                currrent->next->prev = currrent->prev;
+        }
+
+        
     }
 }
