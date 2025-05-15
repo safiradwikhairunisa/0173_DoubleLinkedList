@@ -209,3 +209,37 @@ class DoubleLinkedList
         }
     }
 };
+int main()
+{
+    DoubleLinkedList list;
+    char choice;
+
+    do
+    {
+
+        cout << "\nMenu:\n";
+        cout << "1. Add Record\n";
+        cout << "2. Delete Record\n";
+        cout << "3. View Ascending\n";
+        cout << "4. view Descending\n";
+        cout << "5. Search Record\n";
+        cout << "5. Exit\n";
+        cout << "Enter your choice: ";
+
+        cin >> choice;
+
+        switch (choice)
+        {
+            case '1':
+                list.addNode();
+                break;
+            case '2':
+                list.hapus();
+                break;
+            case '3':
+                list.traverse();
+                break;
+        }
+    }
+    
+}
