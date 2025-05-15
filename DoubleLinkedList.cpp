@@ -73,7 +73,7 @@ class DoubleLinkedList
 
         //step 9: Insert between current and current->next
         newNode->next = currrent->next;  //step 9a: newNode.next = current.next
-        newNode->prev = currrent         //step 9b: newNode.prev = current
+        newNode->prev = currrent;        //step 9b: newNode.prev = current
 
         //insert last node
         if (currrent->next != NULL)
@@ -128,5 +128,15 @@ class DoubleLinkedList
         cout << "Record with roll number " << rollNo << "delete" << endl;
     }
 
-    
+    void traverse()
+    {
+        if (START == NULL)
+        {
+            cout << "\nList is empty" << endl;
+            return;
+        }
+        //step 1: Mark first node as currentNode
+        Node *curentNode = START;
+        
+    }
 }
